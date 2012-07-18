@@ -15,7 +15,11 @@ class DocumentsController < ApplicationController
 
 	def create
 		@document = Document.new(:xmlDoc => request.body.read)
-		render :xml => "<?xml version =\"1.0\"?>\n<response stat=\"ok\"/>"
+		if @document.save
+			render :xml => "<?xml version =\"1.0\"?>\n<response stat=\"ok\"/>"
+		else
+			render :xml => "<?xml version =\"1.0\"?>\n<response stat=\"fail\" code = \"error\"/>"
+		end
 	end
 
 end
