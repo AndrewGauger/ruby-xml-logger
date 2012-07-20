@@ -4,7 +4,7 @@ class DocumentsController < ApplicationController
 		@documents = Document.all
 
 		respond_to do |format|
-			format.html
+			format.html		#app/view/documents/index.html.erb
 			format.xml { render xml: @documents}
 		end
 	end
@@ -21,5 +21,15 @@ class DocumentsController < ApplicationController
 			render :xml => "<?xml version =\"1.0\"?>\n<response stat=\"fail\" code = \"error\"/>"
 		end
 	end
+
+	def show
+		@document = Document.find(params[:id])
+
+		respond_to do |format|
+			format.html		#app/views/documents/show.html.erb
+			format.xml { render xml: @document }
+		end
+	end
+
 
 end

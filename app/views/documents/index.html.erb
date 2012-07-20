@@ -1,0 +1,8 @@
+<% provide(:title, 'All Xml Documents') %>
+<h1>Orders</h1>
+
+<ul class="documents">
+	<% @documents.each do |doc| %>
+		<li><%= link_to doc.orderNumber.to_s, doc %></li>
+	<% end %>
+</ul>

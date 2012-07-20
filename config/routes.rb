@@ -13,7 +13,8 @@ Xmllog::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-      resources :documents
+      #resources :documents, :except => [:new, :edit, :update, :destroy]
+      resources :documents, :only => [:index, :show, :create]
   # Sample resource route with options:
   #   resources :products do
   #     member do
