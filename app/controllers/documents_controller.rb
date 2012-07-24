@@ -31,5 +31,10 @@ class DocumentsController < ApplicationController
 		end
 	end
 
+	def download
+		@document = Document.find(params[:id])
+		send_data( @document.xmlDoc.to_s, :type => "text/xml", :filename => @document.orderNumber.to_s + ".xml")
+	end
+
 
 end

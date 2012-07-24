@@ -3,6 +3,6 @@
 
 <ul class="documents">
 	<% @documents.each do |doc| %>
-		<li><%= link_to doc.orderNumber.to_s, doc %></li>
+		<li><%= link_to doc.orderNumber.to_s, doc %> <%=link_to "download", :controller => "documents", :action => "download", :id => doc.id %></li>
 	<% end %>
 </ul>
