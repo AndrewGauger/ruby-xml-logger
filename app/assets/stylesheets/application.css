@@ -11,3 +11,5 @@
  *= require_self
  *= require_tree .
  */
+
+ul {list-style-type:none; font-family:"sans-serif";}

@@ -18,7 +18,7 @@ class DocumentsController < ApplicationController
 		if @document.save
 			render :xml => "<?xml version =\"1.0\"?>\n<response stat=\"ok\"/>"
 		else
-			render :xml => "<?xml version =\"1.0\"?>\n<response stat=\"fail\" code = \"error\"/>"
+			render :xml => "<?xml version =\"1.0\"?>\n<response stat=\"ok\" code = \"exists\"/>"
 		end
 	end
 
