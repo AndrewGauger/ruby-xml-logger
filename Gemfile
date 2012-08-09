@@ -1,35 +1,36 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
 group :development do
-	gem 'sqlite3', '1.3.5'
+  gem 'sqlite3'
+  gem 'debugger'
 end
 
 
 group :production do
-	gem 'pg', '0.12.2'
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   	'3.2.4'
-  gem 'coffee-rails', '3.2.2'
+  gem 'sass-rails'
+  gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', ' 1.2.3'
+  gem 'uglifier'
 end
 
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails'
 
-gem 'nokogiri' , '1.5.4'
+gem 'nokogiri'
 
 
 
@@ -45,5 +46,3 @@ gem 'nokogiri' , '1.5.4'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
